@@ -1,0 +1,7 @@
+POST http://localhost:8080/api/contact/share
+Content-Type: application/json
+
+{
+    "to": "620bb0122d2216e8c32656c6",
+    "contactId": "620c0561bea0a7cbec8e8dbf",
+}
