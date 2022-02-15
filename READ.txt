@@ -11,6 +11,8 @@ front: Reactjs + Material UI
 How to run: npm start 
 PORT: 3000
 
+MongoDB collection: Contact
+mongodb+srv://email:G7ZI8GxENy7YY1pb@cluster0.9esca.mongodb.net/Contact?retryWrites=true&w=majority
 
 How it works: 
 In the API folder, I made a server that connect to a MongoDB database.
@@ -21,7 +23,20 @@ Features:
     Use testing account to sign in, the request will be sent to http://localhost:8080/api/auth/login.
     The request will return with user data and a token with 2 hours expiry date.
     Currently, the signup page is not creating any users, but you can check the http files located at API/http-request
-2. Creating contacts:
-    Data are being fetched from http://localhost:8080/api/users/:id, with id being the identification of the current user.
+2. Creating contact: POST
+    New contact are being created and added to the API endpoint: http://localhost:8080/api/contacts/add.
+    For image uploading, the API is using https://www.npmjs.com/package/multer and uploading single images to the public folder.
+    When new contact are created, the resulting id is then be added to the user contacts list.
+3. Updating contact: PUT
+    Contact are updated by using the API endpoint: http://localhost:8080/api/contact/edit/:id
+    The id of the contact will be used to fetch the Contact and update its contents. 
+4. Deleting contact: DELETE
+    Contact are deleted by using the API endpoint: http://locahost:8080/api/contact/delete/:userId/:id
+    The function in charge of the deletion will use the id to delete the contact from the database and remove the reference id from the user contact list.
+5. Sharing contact: POST
+    The function in charge to sending contact number from one user to another is using the endpoint: http://localhost:8080/api/contact/share
+    The id of the receiver and the data being sent are in the body request. 
+
+
 
 
