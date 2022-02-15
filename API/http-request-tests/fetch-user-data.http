@@ -1,0 +1,7 @@
+GET http://localhost:8080/api/users/620bb0122d2216e8c32656c6
+Content-Type: application/json
+
+{
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1vdGFpQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6IkVtaSIsImxhc3ROYW1lIjoiTW90YWkiLCJpYXQiOjE2NDQ5MjY3MzMsImV4cCI6MTY0NTAxMzEzM30.no2mCLEAU8uU4twA2C6gxUqxvrsByz93d9rwJz2BuP8",
+    "userId":"6207d0e33b14617acec33167"
+}

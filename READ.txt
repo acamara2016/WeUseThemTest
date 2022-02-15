@@ -1,0 +1,27 @@
+Testing account: 
+email: email@gmail.com
+password: password 
+
+API: MongoDB + Expressjs + Nodejs
+How to run: npm run dev
+PORT: 8080
+
+
+front: Reactjs + Material UI
+How to run: npm start 
+PORT: 3000
+
+
+How it works: 
+In the API folder, I made a server that connect to a MongoDB database.
+In the front folder, I made the Front that fetch, update and delete data using the API.
+
+Features:
+1. Authentication: 
+    Use testing account to sign in, the request will be sent to http://localhost:8080/api/auth/login.
+    The request will return with user data and a token with 2 hours expiry date.
+    Currently, the signup page is not creating any users, but you can check the http files located at API/http-request
+2. Creating contacts:
+    Data are being fetched from http://localhost:8080/api/users/:id, with id being the identification of the current user.
+
+
